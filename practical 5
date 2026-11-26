@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experiment 5</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 0 16px; }
+    h1 { text-align: center; }
+    section { border: 1px solid #444; padding: 16px; margin-bottom: 24px; }
+    .bold-heading { text-align: center; font-weight: bold; }
+    .justified { text-align: justify; font-style: italic; text-decoration: underline; }
+    table { border-collapse: collapse; width: 60%; }
+    th, td { border: 1px solid #000; padding: 6px 12px; text-align: left; }
+    .figure { display: inline-block; width: 160px; height: 200px; border: 2px dashed #555;
+              text-align: center; line-height: 200px; margin-top: 16px; }
+    .shapes { margin-top: 16px; display: flex; gap: 16px; align-items: center; }
+    .rect { width: 80px; height: 50px; background: #4a90d9; }
+    .circle { width: 60px; height: 60px; border-radius: 50%; background: #e67e22; }
+    .tri { width: 0; height: 0; border-left: 30px solid transparent; border-right: 30px solid transparent;
+           border-bottom: 55px solid #27ae60; }
+    .letter { border: 1px solid #000; padding: 12px 16px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+
+  <h1>Experiment 5</h1>
+
+  <!-- 5.1 Text Formatting Tools -->
+  <section>
+    <h2>5.1 Text Formatting Tools</h2>
+    <h2 class="bold-heading">Bold Heading</h2>
+    <p class="justified">
+      Demonstrated character formatting and text layout alignment options are shown in this
+      practical exercise. The paragraph was italicized and underlined text style and is
+      justified between the left and right margins, filling the space evenly.
+    </p>
+  </section>
+
+  <!-- 5.2 Insert Operations -->
+  <section>
+    <h2>5.2 Insert Operations (Table, Pictures, Shapes)</h2>
+
+    <table>
+      <thead>
+        <tr><th>Sr. No</th><th>Name</th><th>Dept</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1.</td><td>Smith J.</td><td>Sales</td></tr>
+        <tr><td>2.</td><td>Arun</td><td>HR</td></tr>
+        <tr><td>3.</td><td>Arpit</td><td>IT</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Replace src with your own campus image file -->
+    <div class="figure">Campus Image</div>
+    <!-- <img src="campus.jpg" alt="Campus Image" width="160" height="200"> -->
+
+    <div class="shapes">
+      <div class="rect"></div>
+      <div class="circle"></div>
+      <div class="tri"></div>
+    </div>
+  </section>
+
+  <!-- 5.3 Mail Merge Process -->
+  <section>
+    <h2>5.3 Mail Merge Process</h2>
+    <div class="letter">
+      <p>
+        To,<br>
+        &laquo;First_Name&raquo; &laquo;Last_Name&raquo;,<br>
+        &laquo;Address&raquo;
+      </p>
+      <p><strong>Subject:</strong> Official Invitation</p>
+      <p>Dear &laquo;First_Name&raquo;, you are invited to the event.</p>
+    </div>
+  </section>
+
+</body>
+</html>
