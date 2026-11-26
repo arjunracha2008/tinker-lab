@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My First Page</title>
+
+    <style>
+        table {
+            width: 80%;
+            border: 2px solid black;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 20px auto;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: blue;
+            color: white;
+        }
+
+        td {
+            background-color: lightblue;
+        }
+
+        body {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My First Page</h1>
+
+    <h2>Hello!</h2>
+
+    <p style="color:red;">
+        This is SIT, situated at Wathoda Nagpur.
+        <br>
+        This college has only one department i.e.
+        <u><strong><q>Computer Science and Engineering</q></strong></u>
+        and we belong to 1st year i.e.
+        <em>Batch 2026-2030</em>.
+    </p>
+
+    <p style="background-color:yellow;
+              font-size:25px;
+              border:2px solid black;
+              padding:5px;">
+        We are studying the HTML.
+    </p>
+
+    <p>
+        <i>This is an italic text line.</i>
+    </p>
+
+    <h2 style="text-align:center;">Student Marks Table</h2>
+
+    <table>
+        <tr>
+            <th>Sr. No.</th>
+            <th>Name</th>
+            <th>S1</th>
+            <th>S2</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Rahul Sharma</td>
+            <td>85</td>
+            <td>90</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Priya Verma</td>
+            <td>78</td>
+            <td>82</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Aman Gupta</td>
+            <td>92</td>
+            <td>88</td>
+        </tr>
+    </table>
+
+    <h3>Unordered List</h3>
+
+    <ul style="color:blue;">
+        <li>X</li>
+        <li style="color:red;">Y</li>
+        <li>Z</li>
+    </ul>
+
+    <h3>Ordered List</h3>
+
+    <ol style="color:blue;">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ol>
+
+</body>
+</html>
