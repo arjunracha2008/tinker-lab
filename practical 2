@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Links, Images and Navigation</title>
+</head>
+
+<body>
+
+    <h2>My First Project</h2>
+
+    <a href="https://sitnagpur.edu.in"
+       target="_blank">
+        SIT Nagpur
+    </a>
+
+    <h3>My First Image</h3>
+
+    <img src="3532.jpg"
+         alt="SIT Nagpur Campus"
+         width="600"
+         height="300">
+
+    <br><br>
+
+    <nav>
+        <a href="#sitnagpur">SIT Nagpur</a>
+        <br><br>
+
+        <a href="#about">About</a>
+        <br><br>
+
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <br>
+
+    <section id="sitnagpur">
+        <h2>SIT Nagpur</h2>
+        <p>
+            1 <br>
+            2 <br>
+            3 <br>
+            4 <br>
+            5
+        </p>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>
+            1 <br>
+            2 <br>
+            3 <br>
+            4 <br>
+            5
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+            SIT Nagpur <br>
+            Wathoda <br>
+            Nagpur <br>
+            440008
+        </p>
+    </section>
+
+</body>
+</html>
