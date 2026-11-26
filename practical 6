@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Experiment 6</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; padding: 0 12px; }
+  h1, h2 { text-align: center; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #000; padding: 6px; text-align: center; }
+  th { background: #eee; }
+  code { background: #f3f3f3; padding: 2px 4px; }
+  .chart { display: flex; align-items: flex-end; justify-content: space-around;
+           height: 260px; border-left: 2px solid #000; border-bottom: 2px solid #000;
+           margin: 30px 0 0 40px; position: relative; }
+  .bar { width: 80px; background: #4a90d9; text-align: center; position: relative; }
+  .bar span { position: absolute; top: -22px; left: 0; right: 0; font-size: 13px; }
+  .labels { display: flex; justify-content: space-around; margin-left: 40px; }
+  .labels div { width: 80px; text-align: center; padding-top: 4px; }
+  .ylabel { transform: rotate(-90deg); position: absolute; left: -90px; top: 110px; font-size: 14px; }
+  .xlabel { text-align: center; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<h1>Experiment No. 6</h1>
+<h2>Data Table and Formula</h2>
+
+
+
+<table id="marks">
+  <thead>
+    <tr><th>Cell</th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr>
+    <tr><th></th><th>Roll No</th><th>Name</th><th>Sub1</th><th>Sub2</th><th>Sub3</th>
+        <th>Total</th><th>Percentage</th><th>Result</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Row 2</td><td>101</td><td>Aarav</td><td>85</td><td>92</td><td>95</td><td></td><td></td><td></td></tr>
+    <tr><td>Row 3</td><td>102</td><td>Ananya</td><td>65</td><td>70</td><td>58</td><td></td><td></td><td></td></tr>
+    <tr><td>Row 4</td><td>103</td><td>Rohan</td><td>25</td><td>30</td><td>35</td><td></td><td></td><td></td></tr>
+  </tbody>
+</table>
+
+
+
+<div class="chart" id="chart"><div class="ylabel">Percentage (%)</div></div>
+<div class="labels" id="labels"></div>
+<div class="xlabel">Student Name</div>
+
+<script>
+  const rows = document.querySelectorAll("#marks tbody tr");
+  const chart = document.getElementById("chart");
+  const labels = document.getElementById("labels");
+
+  rows.forEach(r => {
+    const c = r.cells;
+    const total = +c[3].textContent + +c[4].textContent + +c[5].textContent; // SUM
+    const pct = (total / 300) * 100;                                          // (F/300)*100
+    const result = pct >= 90 ? "Merit" : pct >= 40 ? "Pass" : "Fail";        // IF
+    c[6].textContent = total;
+    c[7].textContent = pct.toFixed(2) + "%";
+    c[8].textContent = result;
+
+    const bar = document.createElement("div");
+    bar.className = "bar";
+    bar.style.height = pct * 2.6 + "px";   // chart height 260px = 100%
+    bar.innerHTML = "<span>" + pct.toFixed(2) + "%</span>";
+    chart.appendChild(bar);
+
+    const lab = document.createElement("div");
+    lab.textContent = c[2].textContent;
+    labels.appendChild(lab);
+  });
+</script>
+
+</body>
+</html>
