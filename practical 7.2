@@ -1,0 +1,19 @@
+int buttonPin = 2;
+int ledPin = 8;
+int buzzerPin = 9;
+
+void setup() {
+  pinMode(buttonPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+  pinMode(buzzerPin, OUTPUT);
+}
+
+void loop() {
+  if (digitalRead(buttonPin) == HIGH) {
+    digitalWrite(ledPin, HIGH);
+    tone(buzzerPin, 1000);
+  } else {
+    digitalWrite(ledPin, LOW);
+    noTone(buzzerPin);
+  }
+}
